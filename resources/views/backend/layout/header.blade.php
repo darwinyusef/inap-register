@@ -56,7 +56,7 @@
 
                     </ul>
                 </li>
-                <li><a href="{{ route('login') }}">Info</a></li>
+                <li><a href="https://www.gfiles.co/publicaciones/213/terminos-y-condiciones-del-servicio/"> <i class="fa fa-caret-square-o-down" aria-hidden="true"></i></a></li>
             </ul>
         </div>
     </nav>

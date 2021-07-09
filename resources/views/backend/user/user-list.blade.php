@@ -20,7 +20,7 @@
     <div class="container" id="search" hidden>
         <div class="row">
             <div class="col-md-4 col-md-offset-4" style="margin-bottom:60px">
-                <form action="/backend/usuarios" method="get" class="text-center">
+                <form action="/tools/backend/usuarios" method="get" class="text-center">
 
                     <div class="form-group{{ $errors->has('total') ? ' has-error' : '' }}">
                         <label for="total" class="col-md-12">Paginacion</label>
@@ -101,19 +101,19 @@
                         <td>{{ $user->firstname }} {{ $user->lastname }}</td>
                         <td>{{ $user->email }}</td>
                         <td>
-                        <a title="Ver" href="/backend/usuarios/{{ $user->id }}" style="display:inline-block"
+                        <a title="Ver" href="/tools/backend/usuarios/{{ $user->id }}" style="display:inline-block"
                             class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></a> <a title="Actualizar"
-                            href="/backend/usuarios/{{ $user->id }}/edit" style="display:inline-block"> <button
+                            href="/tools/backend/usuarios/{{ $user->id }}/edit" style="display:inline-block"> <button
                                 type="submit" class="btn btn-xs btn-info" id="next"><i class="fa fa-pencil"></i></button>
                         </a>
-                        <form title="Eliminar" style="display:inline-block" method="POST" action="/backend/usuarios/{{ $user->id }}"
+                        <form title="Eliminar" style="display:inline-block" method="POST" action="/tools/backend/usuarios/{{ $user->id }}"
                             accept-charset="UTF-8" class="form-horizontal" data-form="{{ $user->id }}">
                             <input name="_method" type="hidden" value="delete">
                             {{ csrf_field() }}
                             <button class="btn btn-xs btn-danger delete" type="submit" id="{{ $user->id }}"><i
                                     class="fa fa-trash"></i></button>
                         </form>
-                        <a href="/backend/password/{{ $user->id }}"
+                        <a href="/tools/backend/password/{{ $user->id }}"
                             style="display:inline-block" title="restaurar password" class="btn btn-success btn-xs"><i
                                 class="fa fa-user"></i></a>
                         </td>

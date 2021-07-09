@@ -80,7 +80,7 @@
             <div class="resume-content mr-auto" style="width:100%">
               <h3 class="mb-0">Formulario de Inscripción</h3>
               <div class="subheading mb-3">Incluya estos datos en especial importancia aquellos que sean obligatorios</div>
-              <form action="/registro" method="post" style="width:100%">
+              <form action="{{ route('registro.save') }}" method="post" style="width:100%">
                 {{ csrf_field() }}
                 <p class="form-text text-muted">La información contenida a continuación deberá escrita con mayuscula inicial y ser verificada antes de envíar (tenga en cuenta que esta información será 
                  incluida en el diploma y en el certificado de alimentos)</p>

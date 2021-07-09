@@ -75,8 +75,8 @@
 
         <div class="box box-primary">
             <div class="box-body box-profile text-center">
-                <h4>Reportar un problema</h4><button class="btn btn-primary"><i
-                    class="fa fa-bug"></i>  Reportar</button>
+                <h4>Reportar un problema</h4><a href="https://moodlepr.inapayudaspedagogicas.com.co/tools/backend/tickets/create" class="btn btn-primary"><i
+                    class="fa fa-bug"></i>  Reportar</a>
             </div>
         </div>
 
@@ -84,7 +84,7 @@
             <div class="box-body box-profile text-center">
                 <h4>Eliminar <span style="color:red">usuario</span> permanentemente</h4>
                 <form title="Eliminar" style="display:inline-block" method="POST"
-                    action="/backend/usuarios/{{ $user->id }}" accept-charset="UTF-8" class="form-horizontal"
+                    action="/tools/backend/usuarios/{{ $user->id }}" accept-charset="UTF-8" class="form-horizontal"
                     data-form="{{ $user->id }}">
                     <input name="_method" type="hidden" value="delete">
                     {{ csrf_field() }}

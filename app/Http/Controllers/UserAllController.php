@@ -21,7 +21,7 @@ class UserAllController extends Controller
 
   public function __construct()
   {
-    $this->generalRol = 'user';
+    $this->generalRol = env('USER_ROL_BASE');
   }
 
   // Genera la vista de /registro 
@@ -96,8 +96,8 @@ class UserAllController extends Controller
       $solicitud = array_add($solicitud, 'deleted', 0);
 
       $solicitud = array_add($solicitud, 'suspended', 0);
-      $solicitud = array_add($solicitud, 'timecreated', Carbon::now());
-      $solicitud = array_add($solicitud, 'timemodified', Carbon::now());
+      $solicitud = array_add($solicitud, 'timecreated', Carbon::now()->timestamp);
+      $solicitud = array_add($solicitud, 'timemodified', Carbon::now()->timestamp);
 
       if ($solicitud['phone1'] == null) {
         $solicitud = array_add($solicitud, 'phone1', '');
@@ -257,7 +257,7 @@ class UserAllController extends Controller
         'adultName' => $adultName,
       ]));
 
-      $solicitud = array_add($solicitud, 'timemodified', Carbon::now());
+      $solicitud = array_add($solicitud, 'timemodified', Carbon::now()->timestamp);
 
       $collectSoliciutud = collect($solicitud);
 

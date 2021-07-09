@@ -12,28 +12,16 @@
 */
 
 
-Route::get('/', function () {
-  return \Redirect::to('registro');
-});
-Route::get('/home', function () {
+Route::get('home', function () {
   return  \Redirect::action('HomeController@index');
 });
 
-Route::get('/registro', 'UserAllController@reg_create');
-Route::post('/registro', 'UserAllController@store');
-
-
+Route::get('/', 'UserAllController@reg_create');
 Auth::routes();
-Route::post('autenticacion', 'HomeController@login')->name('autenticacion');
-
-Route::get('/activate', function () {
-  return view('auth.activate');
-});
-
-Route::get('/sendValidator/{id}', 'HomeController@sendValidator');
-
 
 Route::prefix('backend')->group(function () {
+  Route::post('registro', 'UserAllController@store')->name('registro.save');
+  Route::post('autenticacion', 'HomeController@login')->name('autenticacion');
   Route::get('/', function () {
     return  \Redirect::action('HomeController@index');
   });

@@ -31,20 +31,20 @@
                     </a>
                     <ul class="treeview-menu">
                         @if (in_array('user:list', $permission))
-                            <li><a href="/backend/usuarios"><i class="fa fa-circle-o"></i> Admin de Usuarios</a></li>
+                            <li><a href="/tools/backend/usuarios"><i class="fa fa-circle-o"></i> Admin de Usuarios</a></li>
                         @endif
                         @if (in_array('user:create', $permission))
-                            <li><a href="/registro"><i class="fa fa-circle-o"></i> Crear un Usuario</a>
+                            <li><a href="/tools/"><i class="fa fa-circle-o"></i> Crear un Usuario</a>
                             </li>
                         @endif
                         @if (in_array('user:recover-pass', $permission))
-                            <li><a href="/backend/password/{{ $cookie->id }}/change"><i class="fa fa-circle-o"></i>
+                            <li><a href="/tools/backend/password/{{ $cookie->id }}/change"><i class="fa fa-circle-o"></i>
                                     Modificar
                                     Contraseña</a>
                             </li>
                         @endif
                         @if (in_array('admin:csv-user', $permission))
-                            <li><a href="/backend/inscribe"><i class="fa fa-circle-o"></i> Cargar usuarios</a></li>
+                            <li><a href="/tools/backend/inscribe"><i class="fa fa-circle-o"></i> Cargar usuarios</a></li>
                         @endif
                     </ul>
                 </li>
@@ -61,9 +61,9 @@
                     </a>
                     <ul class="treeview-menu">
                         @if (in_array('admin:ticket-list', $permission))
-                            <li><a href="/backend/tickets"><i class="fa fa-circle-o"></i> Admin de Tickets</a></li>
+                            <li><a href="/tools/backend/tickets"><i class="fa fa-circle-o"></i> Admin de Tickets</a></li>
                         @endif
-                        <li><a href="/backend/tickets/create"><i class="fa fa-circle-o"></i> Crear un Ticket</a>
+                        <li><a href="/tools/backend/tickets/create"><i class="fa fa-circle-o"></i> Crear un Ticket</a>
                         </li>
                     </ul>
                 </li>
@@ -79,19 +79,19 @@
                 <ul class="treeview-menu">
 
                     @if (in_array('user:basic-update', $permission))
-                        <li><a href="/backend/usuarios/1"><i class="fa fa-circle-o"></i> Mostrar mi Usuario</a>
+                        <li><a href="/tools/backend/usuarios/1"><i class="fa fa-circle-o"></i> Mostrar mi Usuario</a>
                         </li>
                     @endif
 
                     @if (in_array('user:basic-update', $permission))
-                        <li><a href="/backend/usuarios/1/edit"><i class="fa fa-circle-o"></i> Editar mi Usuario</a>
+                        <li><a href="/tools/backend/usuarios/1/edit"><i class="fa fa-circle-o"></i> Editar mi Usuario</a>
                         </li>
                     @endif
                     @if (in_array('user:recover-pass', $permission))
-                        <li><a href="/backend/password/{{ $cookie->id }}"><i class="fa fa-circle-o"></i>Cambiar Contraseña</a></li>
+                        <li><a href="/tools/backend/password/{{ $cookie->id }}"><i class="fa fa-circle-o"></i>Cambiar Contraseña</a></li>
                     @endif
 
-                    <li><a href="/backend/tickets/create"><i class="fa fa-bug"></i> Crear un Ticket</a>
+                    <li><a href="/tools/backend/tickets/create"><i class="fa fa-bug"></i> Crear un Ticket</a>
                     </li>
                 </ul>
             </li>
