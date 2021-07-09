@@ -6,6 +6,7 @@
 /.vagrant
 /backups
 /node_modules
+/public
 Homestead.json
 Homestead.yaml
 npm-debug.log
