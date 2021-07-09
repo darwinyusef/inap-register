@@ -1,0 +1,1 @@
+<?php header('Location: http://moodlepr.inapayudaspedagogicas.com.co/registro');?>
